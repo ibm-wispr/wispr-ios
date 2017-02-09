@@ -13,6 +13,8 @@
 		1422FF161E4A04C9007EFCA7 /* WISPr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1422FF141E4A04C9007EFCA7 /* WISPr.xcdatamodeld */; };
 		1422FF181E4A04C9007EFCA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1422FF171E4A04C9007EFCA7 /* Assets.xcassets */; };
 		1422FF1B1E4A04C9007EFCA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1422FF191E4A04C9007EFCA7 /* LaunchScreen.storyboard */; };
+		1422FF251E4A7D3C007EFCA7 /* ListEmailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422FF241E4A7D3C007EFCA7 /* ListEmailTableViewController.swift */; };
+		1422FF271E4C4F2C007EFCA7 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422FF261E4C4F2C007EFCA7 /* EmailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1422FF171E4A04C9007EFCA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1422FF1A1E4A04C9007EFCA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1422FF1C1E4A04C9007EFCA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1422FF241E4A7D3C007EFCA7 /* ListEmailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEmailTableViewController.swift; sourceTree = "<group>"; };
+		1422FF261E4C4F2C007EFCA7 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		1422FF0C1E4A04C9007EFCA7 /* WISPr */ = {
 			isa = PBXGroup;
 			children = (
+				1422FF241E4A7D3C007EFCA7 /* ListEmailTableViewController.swift */,
 				1422FF0D1E4A04C9007EFCA7 /* AppDelegate.swift */,
 				1422FF0F1E4A04C9007EFCA7 /* ViewController.swift */,
 				1422FF111E4A04C9007EFCA7 /* Main.storyboard */,
+				1422FF261E4C4F2C007EFCA7 /* EmailViewController.swift */,
 				1422FF171E4A04C9007EFCA7 /* Assets.xcassets */,
 				1422FF191E4A04C9007EFCA7 /* LaunchScreen.storyboard */,
 				1422FF1C1E4A04C9007EFCA7 /* Info.plist */,
@@ -99,6 +105,7 @@
 				TargetAttributes = {
 					1422FF091E4A04C9007EFCA7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = SQSTVXJEYJ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1422FF251E4A7D3C007EFCA7 /* ListEmailTableViewController.swift in Sources */,
 				1422FF161E4A04C9007EFCA7 /* WISPr.xcdatamodeld in Sources */,
 				1422FF101E4A04C9007EFCA7 /* ViewController.swift in Sources */,
 				1422FF0E1E4A04C9007EFCA7 /* AppDelegate.swift in Sources */,
+				1422FF271E4C4F2C007EFCA7 /* EmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SQSTVXJEYJ;
 				INFOPLIST_FILE = WISPr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.WISPr;
@@ -274,6 +284,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SQSTVXJEYJ;
 				INFOPLIST_FILE = WISPr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.WISPr;

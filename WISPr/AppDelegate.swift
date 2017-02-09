@@ -11,7 +11,8 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var jwt_token = ""
+    var apiURL = "Sign up for API access from http://www.wispr.rocks/signup"
     var window: UIWindow?
 
 
