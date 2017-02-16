@@ -34,7 +34,7 @@ class EmailViewController: UIViewController {
     func getjson() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
-        let url:URL = URL(string: appDelegate.apiURL + "/messages/" + self.messageId + "?format=mime")!
+        let url:URL = URL(string: appDelegate.apiURL + "/messages/" + self.messageId )!
         let session = URLSession.shared
         let request = NSMutableURLRequest(url: url)
         request.setValue(appDelegate.jwt_token, forHTTPHeaderField: "Authorization")
@@ -54,10 +54,11 @@ class EmailViewController: UIViewController {
             
             do {
                 if let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as? [String:Any] {
-                    //print(json)
+                    print(json)
                     if let jsonDataArray = json["data"] as?[[String:Any]]{
-                        var emailData = jsonDataArray[0]
-                        guard let htmlData = emailData["html"] else {
+                        var emailData = jsonDataArray[0]["bodies"] as? [[String:Any]]
+                        var emailBody = (emailData?[1]["body"])! as! [String:Any]
+                        guard let htmlData = emailBody["text"] else {
                             self.bodyField.loadHTMLString("No content", baseURL: nil)
                             return
                         }

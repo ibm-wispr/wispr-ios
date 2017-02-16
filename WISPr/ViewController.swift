@@ -53,12 +53,11 @@ class ViewController: UIViewController {
             }
             
             
-            
             do {
                 if let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as? [String:Any] {
-                    if let jsonDataArray = json["data"] as?[Any]{
+                   if let jsonDataArray = json["data"] as?[Any]{
                         if let jsonData = jsonDataArray[0] as? [String:Any]{
-                            jwt = jsonData["jwt"] as! String
+                            jwt = jsonData["token"] as! String
                         }
                     }
                 }

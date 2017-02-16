@@ -108,7 +108,7 @@ class ListEmailTableViewController: UITableViewController {
     func getjson() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        let url:URL = URL(string: appDelegate.apiURL + "/messages/search?start=0&tag=INBOX")!
+        let url:URL = URL(string: appDelegate.apiURL + "/tags/Inbox?start=1&count=20")!
         let session = URLSession.shared
         let request = NSMutableURLRequest(url: url)
         request.setValue(appDelegate.jwt_token, forHTTPHeaderField: "Authorization")
@@ -130,10 +130,11 @@ class ListEmailTableViewController: UITableViewController {
                 if let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as? [String:Any] {
                     //print(json)
                     if let jsonDataArray = json["data"] as?[[String:Any]]{
-                        self.items = jsonDataArray
-                        //print(self.items)
-                        self.tableView.reloadData()
-
+                        if let jsonEmail = jsonDataArray[0]["documents"] as? [[String:Any]]{
+                            self.items = jsonEmail
+                            //print(self.items)
+                            self.tableView.reloadData()
+                        }
                     }
                 }
             } catch let err{
